@@ -1,0 +1,15 @@
+{
+  "name": "rasp-IP-upload",
+  "version": "1.0.0",
+  "description": "send HTTP req to mrjasu",
+  "main": "index.js",
+  "dependencies": {
+  	"request": "latest"
+  },
+  "scripts": {
+    "start": "node hello.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mr.jasu",
+  "license": "ISC"
+}
