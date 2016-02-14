@@ -6,7 +6,13 @@ timeToUpdate(function (item) {
     timeToAuth(function (item) {
       // if auth succeeds, try to update again
       if (item === true) {
-        timeToUpdate();
+        timeToUpdate(function (item) {
+          if (item === false) {
+            console.log('Updating fails.');
+          }
+        });
+      } else {
+        console.log('Authentication fails.')
       }
     });
   }
