@@ -1,7 +1,7 @@
 var request = require('request');
 var secret = require('./secret');
 var fs = require('fs');
-var tokenFile = 'token.txt';
+var tokenFile = __dirname+'/token.txt';
 var url = 'http://cloud.mrjasu.com/api';
 
 module.exports = {
