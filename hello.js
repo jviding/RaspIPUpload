@@ -21,7 +21,6 @@ timeToUpdate(function (item) {
 
 function timeToUpdate (callback) {
   request.setIp(function (item) {
-    console.log(item);
     if (JSON.parse(item).success === false) {
       callback(false);
     } else {
@@ -32,7 +31,6 @@ function timeToUpdate (callback) {
 
 function timeToAuth (callback) {
   request.authenticate(function (item) {
-    console.log(item);
     if (item.success === false) {
       callback(false);
     } else {
