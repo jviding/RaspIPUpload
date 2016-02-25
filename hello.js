@@ -21,24 +21,20 @@ timeToUpdate(function (item) {
 
 function timeToUpdate (callback) {
   request.setIp(function (item) {
-    if (typeof callback === 'function' && callback()) {
-      if (JSON.parse(item).success === false) {
-        callback(false);
-      } else {
-        callback(true);
-      }
+    if (JSON.parse(item).success === false) {
+      callback(false);
+    } else {
+      callback(true);
     }
   });
 };
 
 function timeToAuth (callback) {
   request.authenticate(function (item) {
-    if (typeof callback === 'function' && callback()) {
-      if (item.success === false) {
-        callback(false);
-      } else {
-        callback(true);
-      }
+    if (item.success === false) {
+      callback(false);
+    } else {
+      callback(true);
     }
   });
 };
